@@ -1,51 +1,158 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
+
 <head>
+  <style>
+    p {text-align: center;}
+
+</style>
   <meta charset="UTF-8">
-  <title>Activity 1: Basic HTML Bio</title>
+  <title>Bootstrap Visualization</title>
+
+ <!-- import js and css style sheet  -->
+<link rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+  crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+  crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" 
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+  crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+  crossorigin="anonymous">
+</script>
+
+<link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
 
+<!--Navigation Bar-->
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light narvar-text">
+    <a class="navbar-brand latitude heading_text" 
+    href="index.html"><b>Latitude</b></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse nav-left" id="navbarNavDropdown">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Plots
+          </a>
+           <div
+             class="dropdown-menu"
+             aria-labelledby="navbarDropdownMenuLink">
+             <a class="dropdown-item" href="maxtemp.html">Max Temperature</a>
+             <a class="dropdown-item" href="humidity.html">Humidity</a>
+             <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+             <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+           </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="comparisons.html"
+            >Comparisons <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="data.html">Data</a>
+        </li>
+      </ul>
+  </nav>
+    <!--------- End of navbar------->
 
-  <h1>Your Name</h1>
+    <!--------- Summary ------------>
+    <div class="row background">
+      <div class="col-md-4 col-lg-8 card-padding">
+        <div class="card">
+          <div class="card-body">
+           <h5><b>Summary: Latitude vs. X</b></h5>
+           <hr />
+           
+           <img
+            class="card-img-summary"
+            src="assets/images/city lat vs max temp.png"
+            alt="Max Temperature" 
+           />
+           <span>
+           <p>
+            The purpose of this project aimed to analyze the weather of 500+ 
+            cities across the world of varying distance from the equator. using the Python library, the OpenWeather Map API, 
+            and our data analytics problem-solving skills to create a representative weather model across various cities/countries.
+            More specifically, we build a series of scatter plots to showcase the following relationships:Temperature (F) vs. Latitude,
+            Humidity (%) vs. Latitude, Cloudiness (%) vs. Latitude, Wind Speed (mph) vs. Latitude.
+          </span>
+          </div>
+        </div>
+      </div>
+      <!----- End of summary ----->
 
-  <img src="https://picsum.photos/200/200" alt="Your Name">
+      <!------ Visualizations and graphs ------->
+      <div class="col-md-2 col-lg-4 card-padding">
+        <div class="card">
+          <h4><b>Visualizations</b></h4>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3 col-md-6">
+              <a href="maxtemp.html">
+                <img
+                class="img-fluid"
+                src="assets/images/city lat vs max temp.png"
+                alt="Max Temperature"
+                />
+              </a>  
+            </div>
+            <div class="col-sm-3 col-md-6">
+              <a href="humidity.html">
+               <img
+                 class="img-fluid"
+                 src="assets/images/city lat vs humidity.png"
+                 alt="Humidity"
+               />
+              </a>
+            </div>
+            <div class="col-sm-3 col-md-6">
+              <a href="cloudiness.html">
+                <img
+                  class="img-fluid"
+                  src="assets/images/city lat vs cloudiness.png"
+                  alt="Cloudiness"
+                />
+               </a>
+            </div>
 
-  <p>Write a short paragraph about yourself or some placeholder text.</p>
-  <p>A second short paragraph about yourself or some placeholder text.</p>
-
-  <ul>
-    <li><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
-    <li><strong>Github:</strong> <a href="#">sampleName</a></li>
-    <li><strong>Twitter:</strong> <a href="#">coming soon</a></li>
-  </ul>
-
-  <table>
-    <tr>
-      <th>Books</th>
-      <th>Movies</th>
-      <th>Games</th>
-    </tr>
-    <tr>
-      <td>The Hobbit</td>
-      <td>Hot Fuzz</td>
-      <td>Dark Souls</td>
-    </tr>
-    <tr>
-      <td>The Name of the Wind</td>
-      <td>The Avengers</td>
-      <td>The Last of Us</td>
-    </tr>
-    <tr>
-      <td>The Girl With All the Gifts</td>
-      <td>The Matrix</td>
-      <td>Dragon Age: Origins</td>
-    </tr>
-  </table>
-
-  <!-- Bonus link to last class page -->
-  <a href="../../../../1/Activities/04-Stu_MyFirst_HTML/Solved/my-first-bonus.html">My First HTML Bonus</a>
-
-</body>
-
+            <div class="col-sm-3 col-md-6">
+              <a href="windspeed.html">
+                <img
+                  class="img-fluid"
+                  src="assets/images/city lat vs wind speed.png"
+                  alt="Wind Speed"
+                />
+               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
